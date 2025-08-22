@@ -9,3 +9,6 @@ class KettleTelemetry(Enum):
 class KettleAttributes(Enum):
     firmware = auto(),
     waterVolume = auto()
+class RpcCommands(Enum):
+    fillWater = auto()
+    setState = auto()
