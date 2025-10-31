@@ -7,9 +7,9 @@ from enums import KettleTelemetry, KettleAttributes, RpcCommands
 from kettle import Kettle
 
 # Replace with your ThingsBoard instance host
-THINGSBOARD_HOST = "eu.thingsboard.cloud"
+THINGSBOARD_HOST = "demo.thingsboard.io"
 #Replace with your device access token
-ACCESS_TOKEN = "x50iGc3TS6kel7FscvvF"
+ACCESS_TOKEN = "your_device_token"
 
 RPC_SUBSCRIPTION_URL = 'v1/devices/me/rpc/request/+'
 

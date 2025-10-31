@@ -22,5 +22,3 @@ Open **emulator.py**, replace THINGSBOARD_HOST and ACCESS_TOKEN with your own va
     ```bash
     python main.py
     ```
-## Example dashboard with data from the emulator:
-![dashboard with data](assets/dashboard.png)
