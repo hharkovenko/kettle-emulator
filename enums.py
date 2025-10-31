@@ -3,6 +3,7 @@ from enum import Enum, auto
 class KettleTelemetry(Enum):
     waterTemperature = auto()
     waterLevel = auto()
+    waterLevelPercent =auto
     waterHeatingProgress = auto()
     isHeating = auto()
     

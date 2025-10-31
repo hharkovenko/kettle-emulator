@@ -12,6 +12,7 @@ class Kettle:
     def __init__(self):
         self.isHeating = False
         self.waterLevel = 0
+        self.waterLevelPercent = 0
         self.waterTemperature = BASE_TEMPERATURE
         self.waterHeatingProgressPercent=0
         self.isRunning = True
@@ -29,6 +30,7 @@ class Kettle:
     def get_current_telemetry(self):
         return {KettleTelemetry.waterTemperature.name : self.waterTemperature,
                  KettleTelemetry.waterLevel.name: self.waterLevel, 
+                 KettleTelemetry.waterLevelPercent.name : self.waterLevelPercent,
                  KettleTelemetry.waterHeatingProgress.name : self.waterHeatingProgressPercent,
                  KettleTelemetry.isHeating.name : self.isHeating}
     def get_attributes(self):
@@ -37,7 +39,8 @@ class Kettle:
         KettleAttributes.waterVolume.name : MAX_WATER_VOLUME
     }
     def fill_water(self, amount):
-        self.waterLevel = amount
+        self.waterLevel = amount * MAX_WATER_VOLUME / 100
+        self.waterLevelPercent = amount
     def power(self, state):
         self.isHeating = state
         if self.isHeating:
